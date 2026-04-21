@@ -16,8 +16,6 @@ Repository based on `datsfilipe/nvim-colorscheme-template` template.
 
 ### Using with lazy.nvim (from GitHub)
 
-After publishing to GitHub, change the `dir` to use the repository:
-
 ```lua
 return {
   {
