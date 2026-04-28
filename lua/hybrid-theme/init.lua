@@ -295,7 +295,7 @@ local function set_groups()
     ['@keyword'] = { link = 'Keyword' },
     -- ["@storageclass"] = {},
     -- ["@structure"] = {},
-    ['@namespace'] = { fg = colorscheme.syntaxType },
+    ['@namespace'] = { fg = colorscheme.syntaxFunction },
     ['@annotation'] = { link = 'Label' },
     -- ["@include"] = {},
     -- ["@preproc"] = {},

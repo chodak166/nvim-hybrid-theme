@@ -43,8 +43,8 @@ local function refresh()
 
     -- Entity/type names (light placeholders, tune as needed)
     colorscheme.syntaxClass = '#6871ff'
-    colorscheme.syntaxType = '#1976d2'
-    colorscheme.syntaxTypeBuiltin = '#9966cc'
+    colorscheme.syntaxType = '#f0ac80'
+    colorscheme.syntaxTypeBuiltin = '#b2ccd6'
     colorscheme.syntaxVariable = '#616161'
     colorscheme.syntaxParameter = '#333333'
     colorscheme.syntaxProperty = '#1976d2'
