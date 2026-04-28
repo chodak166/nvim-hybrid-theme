@@ -332,6 +332,8 @@ local function set_groups()
     ['@lsp.type.decorator'] = { link = '@label' },
     ['@lsp.typemod.function.declaration'] = { link = '@function' },
     ['@lsp.typemod.function.readonly'] = { link = '@function' },
+
+    ['@module'] = { fg = colorscheme.syntaxFunction },
   }
 
   -- integrations
