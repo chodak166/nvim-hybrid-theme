@@ -43,7 +43,7 @@ local function refresh()
 
     -- Entity/type names (light placeholders, tune as needed)
     colorscheme.syntaxClass = '#6871ff'
-    colorscheme.syntaxType = '#f0ac80'
+    colorscheme.syntaxType = '#ebd77e'
     colorscheme.syntaxTypeBuiltin = '#b2ccd6'
     colorscheme.syntaxVariable = '#616161'
     colorscheme.syntaxParameter = '#333333'
@@ -91,7 +91,7 @@ local function refresh()
     -- entity.name (class names, support.class) → yellow, same as function definitions
     colorscheme.syntaxClass = '#f0c674'
     -- entity.name.type specifically → warm orange, distinct from class/function
-    colorscheme.syntaxType = '#f0ac80'
+    colorscheme.syntaxType = '#ebd77e'
     -- support.type (built-in types like string, number, etc.) → light blue-grey
     colorscheme.syntaxTypeBuiltin = '#b2ccd6'
     -- variable, meta.definition.variable.name → near-white
