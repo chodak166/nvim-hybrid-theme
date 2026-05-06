@@ -83,7 +83,11 @@ local function set_groups()
     NormalFloat = { bg = colorscheme.floatingWindowBackground },
     NormalNC = { link = 'Normal' },
     Pmenu = { link = 'NormalFloat' },
-    PmenuSel = { bg = colorscheme.menuOptionBackground },
+    -- PmenuSel = { bg = colorscheme.menuOptionBackground },
+    PmenuSel = {
+      fg = colorscheme.editorBackground,
+      bg = colorscheme.menuOptionBackground,
+    },
     PmenuSbar = {
       bg = utils.shade(
         colorscheme.syntaxFunction,
@@ -221,6 +225,38 @@ local function set_groups()
     -- sym'@text.literal'
     --
     -- For more information see https://github.com/rktjmp/lush.nvim/issues/109
+
+    -- Snacks Picker (LazyVim default file picker)
+    SnacksPicker = { link = 'NormalFloat' },
+    SnacksPickerBorder = { fg = colorscheme.windowBorder },
+    SnacksPickerTitle = { fg = colorscheme.syntaxFunction, bold = true },
+    SnacksPickerInput = {
+      fg = colorscheme.emphasisText,
+      bg = colorscheme.popupBackground,
+    },
+    SnacksPickerList = { bg = colorscheme.popupBackground },
+    SnacksPickerListItem = {
+      fg = colorscheme.mainText,
+      bg = colorscheme.popupBackground,
+    },
+    SnacksPickerListSelected = {
+      fg = colorscheme.editorBackground,
+      bg = colorscheme.menuOptionBackground,
+      bold = true,
+    },
+    SnacksPickerListCursor = {
+      fg = colorscheme.editorBackground,
+      bg = colorscheme.menuOptionBackground,
+    },
+    SnacksPickerPreview = { bg = colorscheme.floatingWindowBackground },
+    SnacksPickerMatch = { fg = colorscheme.syntaxFunction, bold = true },
+    SnacksPickerDir = { fg = colorscheme.commentText },
+    SnacksPickerFile = { fg = colorscheme.mainText },
+    SnacksPickerGit = { fg = colorscheme.syntaxKeyword },
+    SnacksPickerSpecial = { fg = colorscheme.specialKeyword },
+
+    -- fix these common selection groups that may be missing
+    CurSearch = { link = 'IncSearch' },
 
     ['@text'] = { fg = colorscheme.mainText },
     ['@text.literal'] = { link = 'Property' },
