@@ -85,12 +85,13 @@ local function refresh()
     colorscheme.commentText = '#6c7a80' -- comment → muted teal-grey
     colorscheme.syntaxOperator = '#de935f' -- meta.tag, punctuation.definition.tag → orange
 
-    colorscheme.indent_1 = '#3d3630'
-    colorscheme.indent_2 = '#4f4740'
-    colorscheme.indent_3 = '#635a52'
-    colorscheme.indent_4 = '#786e65'
-    colorscheme.indent_5 = '#8f847a'
-    colorscheme.indent_6 = '#a69a8f'
+    colorscheme.indent_0 = '#3d3630'
+    colorscheme.indent_1 = '#4f4740'
+    colorscheme.indent_2 = '#635a52'
+    colorscheme.indent_3 = '#786e65'
+    colorscheme.indent_4 = '#8a807a'
+    colorscheme.indent_5 = '#8e837e'
+    colorscheme.indent_5 = '#a69a8f'
 
     -- entity.name (class names, support.class) → yellow, same as function definitions
     colorscheme.syntaxClass = '#f0c674'

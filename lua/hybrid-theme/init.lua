@@ -80,7 +80,7 @@ local function set_groups()
     -- MsgSeparator = {},
     MoreMsg = { fg = colorscheme.syntaxFunction },
     NonText = { fg = utils.shade(colorscheme.editorBackground, 0.30) },
-    NormalFloat = { bg = colorscheme.floatingWindowBackground },
+    NormalFloat = { fg = colorscheme.mainText, bg = colorscheme.floatingWindowBackground },
     NormalNC = { link = 'Normal' },
     Pmenu = { link = 'NormalFloat' },
     -- PmenuSel = { bg = colorscheme.menuOptionBackground },
@@ -399,6 +399,11 @@ local function set_groups()
   end
 
   -- Apply rainbow indentation highlights
+  vim.api.nvim_set_hl(0, 'IblIndent', {
+    fg = colorscheme['indent_0'],
+    nocombine = true,
+    default = true,
+  })
   for i = 1, 6 do
     vim.api.nvim_set_hl(0, 'IblIndent' .. i, {
       fg = colorscheme['indent_' .. i],
