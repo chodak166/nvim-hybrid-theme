@@ -5,10 +5,10 @@ local M = {}
 function M.highlights()
   colorscheme()
   return {
-    CmpItemAbbr = { fg = colorscheme.mainText },
-    CmpItemAbbrDeprecated = { fg = colorscheme.mainText, strikethrough = true },
+    CmpItemAbbr = { fg = colorscheme.commandText },
+    CmpItemAbbrDeprecated = { fg = colorscheme.commandText, strikethrough = true },
     CmpItemKind = { fg = colorscheme.syntaxFunction },
-    CmpItemMenu = { fg = colorscheme.mainText },
+    CmpItemMenu = { fg = colorscheme.commandText },
     CmpItemAbbrMatch = { fg = colorscheme.successText, bold = true },
     CmpItemAbbrMatchFuzzy = { fg = colorscheme.successText, bold = true },
 

@@ -1,3 +1,4 @@
+local blink = require 'hybrid-theme.integrations.blink'
 local bufferline = require 'hybrid-theme.integrations.bufferline'
 local cmp = require 'hybrid-theme.integrations.cmp'
 local colorscheme = require 'hybrid-theme.colorscheme'
@@ -80,8 +81,12 @@ local function set_groups()
     -- MsgSeparator = {},
     MoreMsg = { fg = colorscheme.syntaxFunction },
     NonText = { fg = utils.shade(colorscheme.editorBackground, 0.30) },
-    NormalFloat = { fg = colorscheme.mainText, bg = colorscheme.floatingWindowBackground },
+    NormalFloat = {
+      fg = colorscheme.mainText,
+      bg = colorscheme.floatingWindowBackground,
+    },
     NormalNC = { link = 'Normal' },
+    -- Pmenu = { fg = colorscheme.mainText, bg = '#1e2124' },
     Pmenu = { link = 'NormalFloat' },
     -- PmenuSel = { bg = colorscheme.menuOptionBackground },
     PmenuSel = {
@@ -285,7 +290,6 @@ local function set_groups()
     ['@text.diff.delete'] = { fg = colorscheme.errorText },
 
     ['@constant'] = { link = 'Constant' },
-    ['@constant.builtin'] = { fg = colorscheme.syntaxFunction },
     ['@constant.builtin'] = { link = 'Keyword' },
     -- ["@constant.macro"] = {},
     -- ["@define"] = {},
@@ -384,6 +388,7 @@ local function set_groups()
   }
 
   -- integrations
+  groups = vim.tbl_extend('force', groups, blink.highlights())
   groups = vim.tbl_extend('force', groups, cmp.highlights())
 
   -- overrides
