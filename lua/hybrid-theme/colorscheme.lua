@@ -14,9 +14,6 @@ local function refresh()
     colorscheme.menuOptionBackground = '#ededed'
 
     colorscheme.mainText = '#616161'
-    colorscheme.emphasisText = '#212121'
-    colorscheme.commandText = '#333333'
-    colorscheme.inactiveText = '#9e9e9e'
     colorscheme.disabledText = '#d0d0d0'
     colorscheme.lineNumberText = '#a1a1a1'
     colorscheme.selectedText = '#424242'
@@ -87,6 +84,13 @@ local function refresh()
     colorscheme.specialKeyword = '#b294bb' -- keyword.other.special-method → purple
     colorscheme.commentText = '#6c7a80' -- comment → muted teal-grey
     colorscheme.syntaxOperator = '#de935f' -- meta.tag, punctuation.definition.tag → orange
+
+    colorscheme.indent_1 = '#3d3630'
+    colorscheme.indent_2 = '#4f4740'
+    colorscheme.indent_3 = '#635a52'
+    colorscheme.indent_4 = '#786e65'
+    colorscheme.indent_5 = '#8f847a'
+    colorscheme.indent_6 = '#a69a8f'
 
     -- entity.name (class names, support.class) → yellow, same as function definitions
     colorscheme.syntaxClass = '#f0c674'

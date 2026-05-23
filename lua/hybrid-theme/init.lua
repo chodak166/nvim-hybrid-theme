@@ -386,6 +386,17 @@ local function set_groups()
   for group, parameters in pairs(groups) do
     vim.api.nvim_set_hl(0, group, parameters)
   end
+
+
+  -- Apply rainbow indentation highlights
+  for i = 1, 6 do
+    vim.api.nvim_set_hl(0, 'IblIndent' .. i, {
+      fg = colorscheme['indent_' .. i],
+      nocombine = true, -- Keeps lines crisp, prevents blending with text underneath
+      default = true, -- Allows lazyvim/users to override if needed
+    })
+  end
+
 end
 
 function theme.setup(values)
