@@ -124,7 +124,7 @@ local function set_groups()
     },
     VisualNOS = { link = 'Visual' },
     WarningMsg = { fg = colorscheme.warningText },
-    Whitespace = { fg = colorscheme.syntaxOperator },
+    Whitespace = { fg = colorscheme.disabledText },
     WildMenu = { bg = colorscheme.menuOptionBackground },
     Comment = {
       fg = colorscheme.commentText,
@@ -352,6 +352,10 @@ local function set_groups()
     ['@label.help'] = { link = '@text.uri' }, -- For help files
     ['@text.uri.html'] = { underline = true }, -- For html
 
+    -- bash: ensure all variables (including CAPITAL_VARIABLES) use variable color
+    ['@variable.bash'] = { fg = '#e4e4e4', italic = config.italics.variables or false },
+    ['@constant.bash'] = { fg = '#e4e4e4', italic = config.italics.variables or false },
+
     -- semantic highlighting
     ['@lsp.type.namespace'] = { link = '@namespace' },
     ['@lsp.type.type'] = { link = '@type' },
@@ -387,7 +391,6 @@ local function set_groups()
     vim.api.nvim_set_hl(0, group, parameters)
   end
 
-
   -- Apply rainbow indentation highlights
   for i = 1, 6 do
     vim.api.nvim_set_hl(0, 'IblIndent' .. i, {
@@ -396,7 +399,6 @@ local function set_groups()
       default = true, -- Allows lazyvim/users to override if needed
     })
   end
-
 end
 
 function theme.setup(values)
