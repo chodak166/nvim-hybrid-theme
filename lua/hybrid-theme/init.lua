@@ -120,7 +120,8 @@ local function set_groups()
     SpellRare = { undercurl = true, sp = colorscheme.warningText },
     Title = { fg = colorscheme.syntaxFunction },
     Visual = {
-      bg = '#2a3e4a',
+      bg = '#3a4e5a',
+      fg = colorscheme.mainText,
     },
     VisualNOS = { link = 'Visual' },
     WarningMsg = { fg = colorscheme.warningText },
@@ -353,8 +354,14 @@ local function set_groups()
     ['@text.uri.html'] = { underline = true }, -- For html
 
     -- bash: ensure all variables (including CAPITAL_VARIABLES) use variable color
-    ['@variable.bash'] = { fg = '#e4e4e4', italic = config.italics.variables or false },
-    ['@constant.bash'] = { fg = '#e4e4e4', italic = config.italics.variables or false },
+    ['@variable.bash'] = {
+      fg = '#e4e4e4',
+      italic = config.italics.variables or false,
+    },
+    ['@constant.bash'] = {
+      fg = '#e4e4e4',
+      italic = config.italics.variables or false,
+    },
 
     -- semantic highlighting
     ['@lsp.type.namespace'] = { link = '@namespace' },
