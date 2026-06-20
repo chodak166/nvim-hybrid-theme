@@ -1,6 +1,7 @@
 local blink = require 'hybrid-theme.integrations.blink'
 local bufferline = require 'hybrid-theme.integrations.bufferline'
 local cmp = require 'hybrid-theme.integrations.cmp'
+local markdown = require 'hybrid-theme.integrations.markdown'
 local colorscheme = require 'hybrid-theme.colorscheme'
 local config = require 'hybrid-theme.config'
 local utils = require 'hybrid-theme.utils'
@@ -390,6 +391,7 @@ local function set_groups()
   -- integrations
   groups = vim.tbl_extend('force', groups, blink.highlights())
   groups = vim.tbl_extend('force', groups, cmp.highlights())
+  groups = vim.tbl_extend('force', groups, markdown.highlights())
 
   -- overrides
   groups = vim.tbl_extend(
