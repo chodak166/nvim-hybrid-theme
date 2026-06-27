@@ -261,6 +261,16 @@ local function set_groups()
     SnacksPickerFile = { fg = colorscheme.mainText },
     SnacksPickerGit = { fg = colorscheme.syntaxKeyword },
     SnacksPickerSpecial = { fg = colorscheme.specialKeyword },
+    SnacksPickerPickWin = {
+      fg = colorscheme.editorBackground,
+      bg = colorscheme.specialKeyword,
+      bold = true,
+    },
+    SnacksPickerPickWinCurrent = {
+      fg = colorscheme.editorBackground,
+      bg = colorscheme.linkText,
+      bold = true,
+    },
 
     -- fix these common selection groups that may be missing
     CurSearch = { link = 'IncSearch' },
